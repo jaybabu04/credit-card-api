@@ -15,7 +15,7 @@ http://localhost:8088/swagger-ui/index.html
 Authentication
 ---------------
 
-Api requrired basic authentication.
+Api required basic authentication.
 
 Endpoints 
 ---------
