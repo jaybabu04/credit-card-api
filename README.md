@@ -17,11 +17,12 @@ Authentication
 
 Api requrired basic authentication.
 
-Method:
---------
+Endpoints 
+---------
 
-1.POST /api/v1/credit-card -save card informations
-2.GET /api/v1/credit-card -get all card informations
+1.POST   /api/v1/credit-card -save card informations
+
+2.GET   /api/v1/credit-card -get all card informations
 
 Supported Content Type
 ----------------------
