@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 import java.time.LocalDateTime;
 
 @Data
@@ -26,9 +27,11 @@ public class CardInfo {
     private String cardNumber;
     private double creditlimit;
     private double balance=0;
-    @JsonIgnore
+    @Null
     private boolean active=false;
+    @Null
     private LocalDateTime createdDateTime = LocalDateTime.now();
+    @Null
     private LocalDateTime updatedDateTime = LocalDateTime.now();
     private String createdBy;
     private String updatedBy;

@@ -29,7 +29,7 @@ public class CreditCardProcessingController {
             @ApiResponse(responseCode = "400", description = "Bad Request"),
             @ApiResponse(responseCode = "500", description = "Internal server error" )
     })
-    public ResponseEntity save(@Valid  @RequestBody CardInfo cardInfo){
+    public ResponseEntity save(@RequestBody @Valid CardInfo cardInfo){
         creditCardService.save(cardInfo);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
