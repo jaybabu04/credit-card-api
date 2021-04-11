@@ -6,11 +6,10 @@ import com.credit.card.app.validation.Luhn;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.Arrays;
-import java.util.stream.Stream;
 
 public class LuhnValidator implements ConstraintValidator<Luhn, String> {
 
-    String regex = "[0-9]+";
+    final String regex = "[0-9]+";
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
@@ -45,8 +44,7 @@ public class LuhnValidator implements ConstraintValidator<Luhn, String> {
             cardIntArray[i]=num;
         }
         int sum = Arrays.stream(cardIntArray).sum();
-        boolean isValidCard = sum%10==0;
-        return isValidCard;
+        return sum%10==0;
     }
 
 }
